@@ -49,7 +49,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'echo Tests skipped'
+                bat 'npm test'
             }
         }
     }
