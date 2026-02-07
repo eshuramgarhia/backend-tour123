@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
 
     tools {
@@ -14,30 +14,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/eshuramgarhia/backend-tour123.git'
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-  
-            }
-        }
-
-        pipeline {
-    agent any
-
-    environment {
-        NODE_ENV = 'any'
-    }
-
-    stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'master',
-                url: 'https://github.com/eshuramgarhia/backend-tour123.git'
+                    url: 'https://github.com/eshuramgarhia/bikebackend.git'
             }
         }
 
@@ -50,11 +27,6 @@ pipeline {
         stage('Run Tests') {
             steps {
                 bat 'npm test'
-            }
-        }
-    }
-}
-
             }
         }
 
