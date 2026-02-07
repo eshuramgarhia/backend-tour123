@@ -14,7 +14,7 @@
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/eshuramgarhia/bikebackend.git'
+                    url: 'https://github.com/eshuramgarhia/backend-tour123.git'
             }
         }
 
